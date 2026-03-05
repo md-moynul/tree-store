@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree Store</title>
+    <link rel="shortcut icon" href="./assets/hero-leaf1.png" type="image/x-icon">
+    <!-- tailwind and Daisyui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- goggle font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style/style.css">
+
+</head>
+
+<body>
+    <main class="bg-[#CFF0DC]">
+        <section id="Choose-Your-Trees" class="py-20 w-11/12 mx-auto space-y-10">
+            <h1 class="text-center font-semibold text-3xl">Choose Your Trees</h1>
+            <section class="grid grid-cols-12 gap-7">
+                <div class="col-span-2 shadow-xl  rounded pt-4 space-y-5 pr-4">
+                    <!-- Categories -->
+                    <h2  class="font-semibold text-xl text-center">Categories</h2>
+                    <div class=" sticky top-8">
+                        <button id="all-trees" class="btn btn-primary w-full .categories-btn">All Trees</button>
+                        <div id="categoriesContainer" class="">
+                            <!-- categories dynamically loaded here -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-8 shadow-xl px-2 rounded pt-4">
+                    <!-- trees -->
+                    <section id="treesContainer" class="grid grid-cols-3 gap-4 p-2 space-y-5">
+
+                    </section>
+                    <!-- loading spinner -->
+                    <section id="spinner" class="flex justify-center items-center hidden">
+                        <span class="loading loading-dots loading-md"></span>
+                    </section>
+
+                </div>
+                <div class="col-span-2 shadow-xl px-2 rounded pt-4">
+                    <!-- cart -->
+                </div>
+            </section>
+        </section>
+    </main>
+
+
+    <script src="./sctipt/sctipt.js"></script>
+</body>
+
+</html>
