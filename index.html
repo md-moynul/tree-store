@@ -30,7 +30,7 @@
             <section class="grid grid-cols-12 gap-7">
                 <div class="col-span-2 shadow-xl  rounded pt-4 space-y-5 pr-4">
                     <!-- Categories -->
-                    <h2  class="font-semibold text-xl text-center">Categories</h2>
+                    <h2 class="font-semibold text-xl text-center">Categories</h2>
                     <div class=" sticky top-8">
                         <button id="all-trees" class="btn btn-primary w-full .categories-btn">All Trees</button>
                         <div id="categoriesContainer" class="">
@@ -44,13 +44,72 @@
 
                     </section>
                     <!-- loading spinner -->
-                    <section id="spinner" class="flex justify-center items-center hidden">
+                    <section id="spinner" class=" h-[60vh] flex justify-center items-center hidden">
                         <span class="loading loading-dots loading-md"></span>
                     </section>
+                    <!-- modal -->
+                    <section>
+                        <dialog id="tree-details-modal" class="modal">
+                            <div class="modal-box card-body">
+                                <!-- modal heading  -->
+                                <div class="flex justify-between items-start mb-4">
+                                    <p id="treeName" class="font-bold text-xl text-center">tree name</p>
+                                    <form method="dialog">
+                                        <button
+                                            class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                                    </form>
+                                </div>
+                                <div class="">
+                                    <img id="treeImage" class="h-80 w-full object-cover rounded-xl pb-5" src="./"
+                                        alt="img">
+                                    <div>
+                                        <div class="pb-5">
+                                            <span id="treeDescription" class="line-clamp-2">
+                                            </span>
+                                        </div>
+                                        <div class="flex justify-between pb-3">
 
+                                            <span id="treeCategory"
+                                                class="bg-[#DCFCE7] text-[#15803D] badge text-[16px] font-medium ">category</span>
+                                            <span class="font-bold text-xl">
+                                                $
+                                                <span id="treePrice">
+
+                                                </span>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div class="card-actions ">
+                                        <button id="modalAddToCartBtn" class="btn btn-primary w-full rounded-full text-white">Add to
+                                            Cart</button>
+                                    </div>
+                                    <div class="modal-action">
+                                        <form method="dialog">
+                                            <!-- if there is a button in form, it will close the modal -->
+                                            <button class="btn">Close</button>
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </dialog>
+                    </section>
                 </div>
-                <div class="col-span-2 shadow-xl px-2 rounded pt-4">
-                    <!-- cart -->
+                <div class="col-span-2 shadow-xl px-2 rounded pt-4 ">
+
+                    <h2 class="font-semibold text-xl text-center pb-3">Cart</h2>
+                    <div  class="space-y-5">
+                        <div id="cartCardContainer" class="space-y-5">
+
+                        </div>
+
+                        <div class="card card-body shadow space-y-5">
+                            <p class="font-bold text-xl">Total: $<span id="cartTotal">0</span></p>
+                        </div>
+                    </div>
                 </div>
             </section>
         </section>
